@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "ch.inside-solutions.demo"
+        versionCode = "1"
+        version     = "1.0.0" >
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>Ben's PhoneGap Build</name>
+
+    <description>
+        Just a description of basically nothing.
+    </description>
+
+    <author href="http://fuessballbildli.ch" email="info@fuessballbildli.ch">
+        Ben
+    </author>
+
+    <gap:plugin name="com.phonegap.plugins.barcodescanner" version="1.1.0" />
+
+</widget>
