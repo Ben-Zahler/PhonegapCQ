@@ -14,14 +14,9 @@
 
     document.addEventListener("deviceready", function () {
 
-        cordova.plugins.barcodeScanner.encode(BarcodeScanner.Encode.TEXT_TYPE, "http://www.fuessballbildli.ch",
-                function (success) {
-                    alert("encode success: " + success);
-                }, function (fail) {
-                    alert("encoding failed: " + fail);
-                }
-        );
 
+
+        alert('add click handler ');
         alert('add click handler '+$("#scanit"));
         $("#scanit").click(function () {
             alert('clicked ');
@@ -38,6 +33,15 @@
                     }
             );
         });
+
+        alert('added click handler ');
+        cordova.plugins.barcodeScanner.encode(BarcodeScanner.Encode.TEXT_TYPE, "http://www.fuessballbildli.ch",
+                function (success) {
+                    alert("encode success: " + success);
+                }, function (fail) {
+                    alert("encoding failed: " + fail);
+                }
+        );
     }, false);
 
 
