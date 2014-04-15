@@ -12,12 +12,8 @@
 <script src="barcodescanner.js"></script>
 <script>
 
-    alert('document: '+ document);
     document.addEventListener("deviceready", function () {
 
-        alert('cordova: '+ cordova);
-        alert('cordova plug: '+ cordova.plugins);
-        alert('barcodescanner: '+ cordova.plugins.barcodeScanner);
         cordova.plugins.barcodeScanner.encode(BarcodeScanner.Encode.TEXT_TYPE, "http://www.fuessballbildli.ch",
                 function (success) {
                     alert("encode success: " + success);
@@ -27,6 +23,8 @@
         );
 
         $("#scanit").click(function () {
+
+            alert('clicked, starting barcode scanner '+ cordova.plugins.barcodeScanner);
             cordova.plugins.barcodeScanner.scan(
                     function (result) {
                         alert("We got a barcode\n" +
