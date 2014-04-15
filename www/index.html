@@ -22,8 +22,9 @@
                 }
         );
 
+        alert('add click handler '+$("#scanit"));
         $("#scanit").click(function () {
-
+            alert('clicked ');
             alert('clicked, starting barcode scanner '+ cordova.plugins.barcodeScanner);
             cordova.plugins.barcodeScanner.scan(
                     function (result) {
