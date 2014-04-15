@@ -14,6 +14,7 @@
     $(function () {
 
         alert('cordova: '+ cordova);
+        alert('cordova plug: '+ cordova.plugins);
         alert('barcodescanner: '+ cordova.plugins.barcodeScanner);
         cordova.plugins.barcodeScanner.encode(BarcodeScanner.Encode.TEXT_TYPE, "http://www.fuessballbildli.ch",
                 function (success) {
