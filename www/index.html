@@ -11,6 +11,7 @@
 <script src="barcodescanner.js"></script>
 <script>
     $(function () {
+        alert('barcodescanner: '+ cordova.plugins.barcodeScanner);
         cordova.plugins.barcodeScanner.encode(BarcodeScanner.Encode.TEXT_TYPE, "http://www.fuessballbildli.ch",
                 function (success) {
                     alert("encode success: " + success);
