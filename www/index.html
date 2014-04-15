@@ -11,7 +11,9 @@
 <script src="phonegap.js"></script>
 <script src="barcodescanner.js"></script>
 <script>
-    $(function () {
+
+    alert('document: '+ document);
+    document.addEventListener("deviceready", function () {
 
         alert('cordova: '+ cordova);
         alert('cordova plug: '+ cordova.plugins);
@@ -37,7 +39,8 @@
                     }
             );
         });
-    });
+    }, false);
+
 
 
 </script>
