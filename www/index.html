@@ -36,7 +36,7 @@
 
             alert('clicked, encoding barcode with ' + cordova.plugins.barcodeScanner);
             try{
-                cordova.plugins.barcodeScanner.encode(BarcodeScanner.Encode.TEXT_TYPE, "http://www.fuessballbildli.ch",
+                cordova.plugins.barcodeScanner.encode("TEXT_TYPE", "http://www.fuessballbildli.ch",
                         function (success) {
                             alert("encode success: " + success);
                         }, function (fail) {
