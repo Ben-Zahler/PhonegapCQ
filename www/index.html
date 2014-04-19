@@ -35,13 +35,20 @@
         $("#encodeit").click(function () {
 
             alert('clicked, encoding barcode with ' + cordova.plugins.barcodeScanner);
-            cordova.plugins.barcodeScanner.encode(BarcodeScanner.Encode.TEXT_TYPE, "http://www.fuessballbildli.ch",
-                    function (success) {
-                        alert("encode success: " + success);
-                    }, function (fail) {
-                        alert("encoding failed: " + fail);
-                    }
-            );
+            try{
+                cordova.plugins.barcodeScanner.encode(BarcodeScanner.Encode.TEXT_TYPE, "http://www.fuessballbildli.ch",
+                        function (success) {
+                            alert("encode success: " + success);
+                        }, function (fail) {
+                            alert("encoding failed: " + fail);
+                        }
+                );
+            }
+            catch(err){
+                alert('error');
+                alert('error'+err.message);
+            }
+
         });
     }, false);
 
